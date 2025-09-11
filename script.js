@@ -5,9 +5,9 @@ avanca.forEach(button =>{
  button.addEventListener('clik',function(){
     const atual = document.querySelector('.ativo');
     const proximoPasso = 'passo-'+this.getAtribute('data-proximo');
-
+    
     atual.classList.remove('ativo');
-    cont proximoElemento= document.getElementById(proximoPasso);
+    const proximoElemento= document.getElementById(proximoPasso);
 
     if(proximoElemento){
         proximoElemento.classList.add('ativo');
@@ -16,3 +16,14 @@ avanca.forEach(button =>{
     }
   });
 });
+
+
+//Reinicia o jogo ao clicar no botão de reinício
+if (reiniciarBtn) {
+  reiniciarBtn.addEventListener('click',() => {
+        const atual = Document.querySelector('.ativo');
+        atual.classList.remove('ativo');
+        document.getElementById('passo-0').classList.add('ativo');
+  });
+}
+
